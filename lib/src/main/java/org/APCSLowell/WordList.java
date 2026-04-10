@@ -11,10 +11,19 @@ public class WordList
 
   public int numWordsOfLength(int len)
   {
-     //your code goes here
+     int c = 0; 
+     for(String s : myList)
+     {
+      if(s.length()==len)c++;
+     }
+     return c;
   }
 
   public void removeWordsOfLength(int len)
   {
-    //your code goes here
+    for(int i = myList.size()-1;i>=0;i--)
+    {
+      if(myList.get(i).length()==len)myList.remove(i);
+    }
+  }  
 }
